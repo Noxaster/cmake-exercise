@@ -24,6 +24,8 @@ RUN mkdir build && cd build && \
     make && \
     make install
 
+ENV LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
+
 WORKDIR /cmake-exercise
 
 CMD ["/bin/bash"]
